@@ -1,0 +1,756 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Nandhagopalakrishnan K | Electronics & Embedded Engineer</title><style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b10;
+    color: #f5f7fa;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8,11,16,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #202731;
+}
+
+nav {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #4f9cff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #9ba5b1;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #4f9cff;
+}
+
+.menu {
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(79,156,255,0.15),
+            transparent 35%
+        );
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.small-title {
+    color: #4f9cff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+h1 span {
+    color: #4f9cff;
+}
+
+.hero h2 {
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: normal;
+    color: #dce2e9;
+}
+
+.hero p {
+    max-width: 650px;
+    margin-top: 20px;
+    color: #9ba5b1;
+    font-size: 17px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    padding: 13px 22px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #4f9cff;
+    color: #06101c;
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+}
+
+.secondary {
+    border: 1px solid #303945;
+}
+
+.secondary:hover {
+    border-color: #4f9cff;
+    color: #4f9cff;
+}
+
+/* PROFILE CARD */
+
+.profile-card {
+    padding: 45px 25px;
+    text-align: center;
+    background: #10151c;
+    border: 1px solid #252d37;
+    border-radius: 20px;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border: 1px solid #4f9cff;
+
+    color: #4f9cff;
+    font-size: 45px;
+    font-weight: bold;
+
+    background: rgba(79,156,255,0.08);
+}
+
+.available {
+    margin-top: 22px;
+    color: #9ba5b1;
+    font-size: 13px;
+}
+
+.available::before {
+    content: "●";
+    color: #38d47a;
+    margin-right: 7px;
+}
+
+.profile-info {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #252d37;
+}
+
+.profile-info strong {
+    display: block;
+    font-size: 13px;
+}
+
+.profile-info small {
+    color: #8d98a5;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 110px 0;
+}
+
+.section-title {
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: #4f9cff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    margin-top: 10px;
+    font-size: 45px;
+    line-height: 1.1;
+}
+
+/* ABOUT */
+
+.about {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 70px;
+}
+
+.about .large {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #9ba5b1;
+    margin-bottom: 18px;
+}
+
+.about-boxes {
+    display: grid;
+    gap: 15px;
+}
+
+.about-box {
+    padding: 25px;
+    background: #10151c;
+    border: 1px solid #252d37;
+    border-radius: 12px;
+}
+
+.about-box h3 {
+    margin: 7px 0;
+}
+
+.about-box p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* SKILLS */
+
+.dark-section {
+    background: #06090d;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.skill {
+    padding: 30px;
+    background: #10151c;
+    border: 1px solid #252d37;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    border-color: #4f9cff;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(79,156,255,0.1);
+    color: #4f9cff;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.skill p {
+    color: #9ba5b1;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* PROJECTS */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.project {
+    padding: 35px;
+    background: #10151c;
+    border: 1px solid #252d37;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    border-color: #4f9cff;
+}
+
+.number {
+    color: #4f9cff;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.project h3 {
+    margin: 15px 0;
+    font-size: 23px;
+}
+
+.project p {
+    color: #9ba5b1;
+    font-size: 14px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.tags span {
+    border: 1px solid #303945;
+    padding: 5px 9px;
+    border-radius: 5px;
+    color: #9ba5b1;
+    font-size: 11px;
+}
+
+/* EXPERIENCE */
+
+.experience {
+    background: #f5f7fa;
+    color: #15191f;
+}
+
+.experience .section-title h2 {
+    color: #15191f;
+}
+
+.timeline {
+    max-width: 800px;
+    border-left: 1px solid #ccd2d9;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 55px 40px;
+}
+
+.dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: -6px;
+    top: 5px;
+    border-radius: 50%;
+    background: #4f9cff;
+}
+
+.date {
+    color: #68737f;
+    font-size: 13px;
+}
+
+.timeline h3 {
+    margin-top: 8px;
+    font-size: 21px;
+}
+
+.timeline h4 {
+    color: #347bcf;
+    font-size: 14px;
+}
+
+.timeline p {
+    margin-top: 12px;
+    color: #68737f;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact .section-title h2 {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-text {
+    color: #9ba5b1;
+    margin-top: 20px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-links a {
+    padding: 11px 20px;
+    border: 1px solid #303945;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.contact-links a:hover {
+    color: #4f9cff;
+    border-color: #4f9cff;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px 0;
+    border-top: 1px solid #252d37;
+    color: #8d98a5;
+    font-size: 12px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* MOBILE */
+
+@media(max-width:850px) {
+
+    .menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 25px;
+        background: #080b10;
+        border-bottom: 1px solid #252d37;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero-grid,
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:550px) {
+
+    .skills,
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+</style></head><body><header>
+<nav class="container"><a href="#home" class="logo">NK<span>.</span></a>
+
+<button class="menu" id="menu">☰</button>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav>
+</header><!-- HOME --><section class="hero" id="home"><div class="container hero-grid"><div><p class="small-title">ELECTRONICS • EMBEDDED • IoT</p><h1>
+Hi, I'm
+<span>Nandhagopalakrishnan K</span>
+</h1><h2>Electronics & Embedded Systems Engineer</h2><p>
+I design and develop embedded systems, IoT solutions,
+electronics hardware, Python applications and
+ESP32-based systems.
+</p><div class="buttons"><a href="#projects" class="btn primary">
+View Projects
+</a><a href="#contact" class="btn secondary">
+Contact Me
+</a></div></div><div class="profile-card"><div class="profile">
+NK
+</div><div class="available">
+Available for opportunities
+</div><div class="profile-info"><div>
+<strong>Embedded</strong>
+<small>Systems</small>
+</div><div>
+<strong>IoT</strong>
+<small>Solutions</small>
+</div><div>
+<strong>Python</strong>
+<small>Development</small>
+</div></div></div></div></section><!-- ABOUT --><section id="about"><div class="container"><div class="section-title"><p>ABOUT ME</p><h2>Building practical technology solutions</h2></div><div class="about"><div><p class="large">
+I am an Electronics and Embedded Systems Engineer
+interested in developing reliable hardware, software
+and IoT solutions.
+</p><p>
+My experience includes embedded controllers,
+ESP32, Arduino, Raspberry Pi, sensors,
+communication interfaces, Python applications
+and industrial electronics.
+</p><p>
+I enjoy solving real-world engineering problems
+by combining electronics, firmware and software.
+</p></div><div class="about-boxes"><div class="about-box"><h3>Embedded Systems</h3><p>
+Microcontrollers, sensors, communication interfaces
+and system integration.
+</p></div><div class="about-box"><h3>IoT Development</h3><p>
+Connected devices, APIs, dashboards and
+IoT communication systems.
+</p></div><div class="about-box"><h3>Software Development</h3><p>
+Python applications, desktop GUI and
+web-based interfaces.
+</p></div></div></div></div></section><!-- SKILLS --><section class="dark-section" id="skills"><div class="container"><div class="section-title"><p>TECHNICAL SKILLS</p><h2>Tools & Technologies</h2></div><div class="skills"><div class="skill"><div class="icon">MCU</div><h3>Embedded Systems</h3><p>
+ESP32, Arduino, Raspberry Pi, STM32
+</p></div><div class="skill"><div class="icon">IoT</div><h3>IoT</h3><p>
+Wi-Fi, MQTT, REST API, Firebase and sensors
+</p></div><div class="skill"><div class="icon">PY</div><h3>Python</h3><p>
+FastAPI, Tkinter, OpenCV and automation
+</p></div><div class="skill"><div class="icon">WEB</div><h3>Web Development</h3><p>
+HTML, CSS and JavaScript
+</p></div><div class="skill"><div class="icon">HW</div><h3>Electronics</h3><p>
+Hardware testing, debugging and troubleshooting
+</p></div><div class="skill"><div class="icon">COM</div><h3>Communication</h3><p>
+UART, RS-232, RS-485, Ethernet and TCP/IP
+</p></div></div></div></section><!-- PROJECTS --><section id="projects"><div class="container"><div class="section-title"><p>PROJECTS</p><h2>Selected Projects</h2></div><div class="projects"><div class="project"><div class="number">01</div><h3>ESP32 IoT Server</h3><p>
+Custom Python server for receiving ESP32
+device data through APIs and displaying
+real-time information.
+</p><div class="tags">
+<span>ESP32</span>
+<span>Python</span>
+<span>API</span>
+<span>IoT</span>
+</div></div><div class="project"><div class="number">02</div><h3>Human Detection System</h3><p>
+Camera-based human detection using
+computer vision and MediaPipe with
+ESP32-CAM integration.
+</p><div class="tags">
+<span>ESP32-CAM</span>
+<span>Python</span>
+<span>OpenCV</span>
+<span>MediaPipe</span>
+</div></div><div class="project"><div class="number">03</div><h3>Embedded Test System</h3><p>
+Python-based GUI testing software for
+electronic equipment communication
+and automated testing.
+</p><div class="tags">
+<span>Python</span>
+<span>Tkinter</span>
+<span>Serial</span>
+<span>Testing</span>
+</div></div><div class="project"><div class="number">04</div><h3>ESP32 Communication System</h3><p>
+Microcontroller communication using
+RS-232, RS-485 and Ethernet interfaces.
+</p><div class="tags">
+<span>ESP32</span>
+<span>RS-232</span>
+<span>RS-485</span>
+<span>Ethernet</span>
+</div></div></div></div></section><!-- EXPERIENCE --><section class="experience" id="experience"><div class="container"><div class="section-title"><p>EXPERIENCE</p><h2>Professional Journey</h2></div><div class="timeline"><div class="timeline-item"><div class="dot"></div><span class="date">2025 – Present</span>
+
+<h3>Electronics / Embedded Systems Engineer</h3><h4>Tata Advanced Systems</h4><p>
+Embedded electronics integration, system testing,
+troubleshooting, sensor-head systems and field support.
+</p></div><div class="timeline-item"><div class="dot"></div><span class="date">Previous Experience</span>
+
+<h3>Electronics Engineer</h3><h4>Electronics Industry</h4><p>
+Experience in electronics hardware,
+troubleshooting, testing and system integration.
+</p></div></div></div></section><!-- CONTACT --><section class="contact" id="contact"><div class="container"><div class="section-title"><p>CONTACT</p><h2>Let's build something useful.</h2></div><p class="contact-text">
+Interested in embedded systems, IoT or electronics projects?
+Feel free to get in touch.
+</p><div class="contact-links"><a href="mailto:your.email@example.com">
+Email
+</a><a href="https://github.com/" target="_blank">
+GitHub
+</a><a href="https://www.linkedin.com/" target="_blank">
+LinkedIn
+</a></div></div></section><footer><div class="container footer-content"><p>
+©️ <span id="year"></span>
+Nandhagopalakrishnan K. All rights reserved.
+</p><a href="#home">Back to top ↑</a>
+
+</div></footer><script>
+
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click", function() {
+    navLinks.classList.toggle("show");
+});
+
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("show");
+    });
+
+});
+
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+const sections = document.querySelectorAll("section[id]");
+const links = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", function() {
+
+    let current = "";
+
+    sections.forEach(function(section) {
+
+        const top = section.offsetTop - 150;
+        const bottom = top + section.offsetHeight;
+
+        if (
+            window.scrollY >= top &&
+            window.scrollY < bottom
+        ) {
+            current = section.id;
+        }
+
+    });
+
+
+    links.forEach(function(link) {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+
+    });
+
+});
+
+</script></body>
+</html>
