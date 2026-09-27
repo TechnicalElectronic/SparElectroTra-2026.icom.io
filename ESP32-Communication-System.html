@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ESP32 Communication System | Nandhagopalakrishnan K</title>
+
+    <link rel="stylesheet" href="ESP32-Communication-System.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-container">
+
+        <a href="index.html" class="brand">
+            NK<span>.</span>
+        </a>
+
+        <a href="index.html#projects" class="back-link">
+            ← Back to Projects
+        </a>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="badge">
+            ESP32 • WI-FI • TCP/IP • PYTHON • IoT
+        </div>
+
+        <h1>ESP32 Communication System</h1>
+
+        <p>
+            A custom ESP32 communication system for exchanging
+            real-time data between an ESP32 device and a Python
+            server using Wi-Fi and TCP/IP communication.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#code" class="btn primary">
+                View Source Code
+            </a>
+
+            <a href="#monitor" class="btn secondary">
+                Communication Monitor
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<main class="container">
+
+
+<!-- OVERVIEW -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span>01</span>
+        <h2>Project Overview</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">📡</div>
+            <h3>ESP32 Wi-Fi</h3>
+            <p>
+                ESP32 connects to a Wi-Fi network and
+                establishes communication with the server.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🖥️</div>
+            <h3>Python Server</h3>
+            <p>
+                A Python server receives and processes
+                data transmitted by the ESP32.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔄</div>
+            <h3>Two-Way Communication</h3>
+            <p>
+                The ESP32 sends data and receives ACK
+                responses from the server.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📊</div>
+            <h3>Live Data</h3>
+            <p>
+                Sensor and device information can be
+                monitored in real time.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TECHNOLOGY -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span>02</span>
+        <h2>Technologies</h2>
+    </div>
+
+    <div class="tags">
+
+        <span>ESP32</span>
+        <span>Arduino IDE</span>
+        <span>Wi-Fi</span>
+        <span>TCP/IP</span>
+        <span>Python</span>
+        <span>Socket</span>
+        <span>JSON</span>
+        <span>IoT</span>
+
+    </div>
+
+</section>
+
+
+<!-- ARCHITECTURE -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span>03</span>
+        <h2>Communication Architecture</h2>
+    </div>
+
+    <div class="architecture">
+
+        <div class="node">
+            <strong>ESP32</strong>
+            <small>IoT Device</small>
+        </div>
+
+        <div class="arrow">
+            <small>Wi-Fi</small>
+            →
+        </div>
+
+        <div class="node">
+            <strong>Router</strong>
+            <small>Network</small>
+        </div>
+
+        <div class="arrow">
+            <small>TCP/IP</small>
+            →
+        </div>
+
+        <div class="node">
+            <strong>Python Server</strong>
+            <small>Port 5000</small>
+        </div>
+
+        <div class="arrow">
+            <small>Data</small>
+            →
+        </div>
+
+        <div class="node">
+            <strong>Dashboard</strong>
+            <small>Monitoring</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMMUNICATION FLOW -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span>04</span>
+        <h2>Communication Flow</h2>
+    </div>
+
+    <div class="flow">
+
+        <div class="flow-item">
+            <b>01</b>
+            <h3>Connect Wi-Fi</h3>
+            <p>ESP32 connects to the configured wireless network.</p>
+        </div>
+
+        <div class="flow-item">
+            <b>02</b>
+            <h3>Connect Server</h3>
+            <p>ESP32 connects to the Python server IP and port.</p>
+        </div>
+
+        <div class="flow-item">
+            <b>03</b>
+            <h3>Send Data</h3>
+            <p>ESP32 sends device and sensor information.</p>
+        </div>
+
+        <div class="flow-item">
+            <b>04</b>
+            <h3>Receive ACK</h3>
+            <p>The server sends an acknowledgement response.</p>
+        </div>
+
+        <div class="flow-item">
+            <b>05</b>
+            <h3>Process Data</h3>
+            <p>The Python server processes and stores the data.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DATA FORMAT -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span>05</span>
+        <h2>ESP32 Data Format</h2>
+    </div>
+
+    <div class="json-box">
+
+<pre>{
+    "device_id": "ESP32_001",
+    "temperature": 31.8,
+    "humidity": 48.7,
+    "light": 192,
+    "pressure": 997,
+    "status": "online"
+}</pre>
+
+    </div>
+
+</section>
+
+
+<!-- MONITOR -->
+
+<section class="section" id="monitor">
+
+    <div class="section-title">
+        <span>06</span>
+        <h2>Communication Monitor</h2>
+    </div>
+
+    <div class="monitor">
+
+        <div class="monitor-header">
+
+            <span>ESP32 COMMUNICATION</span>
+
+            <span id="connectionStatus" class="online">
+                ● ONLINE
+            </span>
+
+        </div>
+
+
+        <div class="monitor-grid">
+
+            <div class="monitor-card">
+                <span>DEVICE ID</span>
+                <strong id="deviceId">
+                    ESP32_001
+                </strong>
+            </div>
+
+            <div class="monitor-card">
+                <span>IP ADDRESS</span>
+                <strong id="deviceIp">
+                    192.168.0.150
+                </strong>
+            </div>
+
+            <div class="monitor-card">
+                <span>SERVER PORT</span>
+                <strong>
+                    5000
+                </strong>
+            </div>
+
+            <div class="monitor-card">
+                <span>PACKETS</span>
+                <strong id="packetCount">
+                    128
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="data-grid">
+
+            <div>
+                <span>Temperature</span>
+                <strong id="temperature">31.8 °C</strong>
+            </div>
+
+            <div>
+                <span>Humidity</span>
+                <strong id="humidity">48.7 %</strong>
+            </div>
+
+            <div>
+                <span>Light</span>
+                <strong id="light">192</strong>
+            </div>
+
+            <div>
+                <span>Pressure</span>
+                <strong id="pressure">997 hPa</strong>
+            </div>
+
+        </div>
+
+
+        <button id="sendPacket" class="run-button">
+            ▶️ SEND TEST PACKET
+        </button>
+
+
+        <div id="monitorMessage" class="monitor-message">
+            SYSTEM READY
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CODE -->
+
+<section class="section" id="code">
+
+    <div class="section-title">
+        <span>07</span>
+        <h2>Source Code</h2>
+    </div>
+
+
+    <div class="code-tabs">
+
+        <button class="code-tab active" data-code="esp32">
+            ESP32_Client.ino
+        </button>
+
+        <button class="code-tab" data-code="server">
+            server.py
+        </button>
+
+        <button class="code-tab" data-code="protocol">
+            protocol.py
+        </button>
+
+    </div>
+
+
+    <div class="code-window">
+
+        <div class="code-header">
+
+            <span id="currentFile">
+                ESP32_Client.ino
+            </span>
+
+            <button id="copyCode">
+                ⧉ COPY CODE
+            </button>
+
+        </div>
+
+        <pre><code id="codeDisplay"></code></pre>
+
+    </div>
+
+    <div id="copyMessage">
+        Code copied to clipboard!
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span>08</span>
+        <h2>Key Features</h2>
+    </div>
+
+    <div class="features">
+
+        <div>✓ ESP32 Wi-Fi connectivity</div>
+        <div>✓ TCP/IP communication</div>
+        <div>✓ Python socket server</div>
+        <div>✓ Device identification</div>
+        <div>✓ Two-way communication</div>
+        <div>✓ ACK response</div>
+        <div>✓ Real-time sensor data</div>
+        <div>✓ Multiple device support</div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECT STRUCTURE -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span>09</span>
+        <h2>Project Structure</h2>
+    </div>
+
+    <div class="file-tree">
+
+        <div>📁 ESP32-Communication-System/</div>
+
+        <div class="child">📄 ESP32_Client.ino</div>
+        <div class="child">📄 server.py</div>
+        <div class="child">📄 protocol.py</div>
+        <div class="child">📄 database.py</div>
+        <div class="child">📄 dashboard.html</div>
+        <div class="child">📄 style.css</div>
+        <div class="child">📄 script.js</div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div>
+            <strong>Nandhagopalakrishnan K</strong>
+            <p>Electronics • Embedded • IoT</p>
+        </div>
+
+        <a href="index.html">
+            Back to Portfolio ↑
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script src="ESP32-Communication-System.js"></script>
+
+</body>
+</html>
